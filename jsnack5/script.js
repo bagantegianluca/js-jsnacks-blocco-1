@@ -8,7 +8,7 @@ let checkNumbers = true;
 for (let i = 0; i < 6; i++) {
     const userNumber = Number(prompt('Inserisci un numero'));
     if (!isNaN(userNumber)) {
-        if (userNumber % 2 == 0) {
+        if (userNumber % 2 != 0) {
             evenNumbers.push(userNumber);
         }
     } else {
