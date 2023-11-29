@@ -2,14 +2,14 @@
 Chiedi per 6 volte all’utente di inserire un numero,
 se è dispari inseriscilo nell’array. */
 
-const evenNumbers = [];
+const oddNumbers = [];
 let checkNumbers = true;
 
 for (let i = 0; i < 6; i++) {
-    const userNumber = Number(prompt('Inserisci un numero'));
+    const userNumber = Number(prompt('Inserisci un numero (i dispari saranno inseriti in un array)'));
     if (!isNaN(userNumber)) {
         if (userNumber % 2 != 0) {
-            evenNumbers.push(userNumber);
+            oddNumbers.push(userNumber);
         }
     } else {
         checkNumbers = false;
@@ -19,9 +19,9 @@ for (let i = 0; i < 6; i++) {
 }
 
 if (checkNumbers) {
-    console.log(evenNumbers);
-    alert(`Nell'array sono stati inseriti i numeri ${evenNumbers}.`);
-    document.querySelector('body').innerHTML = `Nell'array sono stati inseriti i numeri ${evenNumbers}.`;
+    console.log(oddNumbers);
+    alert(`Nell'array sono stati inseriti i numeri ${oddNumbers}.`);
+    document.querySelector('body').innerHTML = `Nell'array sono stati inseriti i numeri ${oddNumbers}.`;
 } else {
     console.log("L'utente ha imbrogliato, non ha inserito un numero anche se rischiesto solo numeri");
     alert("L'utente ha imbrogliato, non ha inserito un numero anche se rischiesto solo numeri");
